@@ -1,5 +1,5 @@
 {
-  "name": "redux-contacts",
+  "name": "redux-groceries",
   "version": "1.0.0",
   "description": "Redux Grocery List",
   "main": "index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bmacheski/redux-contacts.git"
+    "url": "git+https://github.com/bmacheski/redux-groceries.git"
   },
   "author": "Brian Macheski <bwm0007@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bmacheski/redux-contacts/issues"
+    "url": "https://github.com/bmacheski/redux-groceries/issues"
   },
-  "homepage": "https://github.com/bmacheski/redux-contacts#readme",
+  "homepage": "https://github.com/bmacheski/redux-groceries#readme",
   "dependencies": {
     "react": "^0.14.8",
     "react-dom": "^0.14.8"
