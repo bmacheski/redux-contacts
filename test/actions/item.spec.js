@@ -17,4 +17,11 @@ describe('item actions', () => {
       id: 0
     })
   })
+
+  it('completeItem should create completeItem action', () => {
+    expect(actions.completeItem(1)).toEqual({
+      type: types.complete_item,
+      id: 1
+    })
+  })
 })

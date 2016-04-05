@@ -1,0 +1,17 @@
+li {
+  box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
+  font-size: 25px;
+  padding: 10px;
+}
+
+span {
+  margin-left: 40px;
+}
+
+.check {
+  float: left;
+}
+
+.bought {
+  text-decoration: line-through;
+}

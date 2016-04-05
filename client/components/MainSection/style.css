@@ -1,0 +1,9 @@
+.main {
+  border: 1px solid black;
+  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+ul {
+  list-style: none;
+  font-weight: 300;
+}
