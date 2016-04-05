@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register --recursive || true",
-    "build": "NODE_ENV=development webpack --w"
+    "build": "NODE_ENV=development webpack",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -28,11 +29,13 @@
     "babel-preset-react": "^6.5.0",
     "css-loader": "^0.23.1",
     "expect": "^1.16.0",
+    "express": "^4.13.4",
     "mocha": "^2.4.5",
     "react-redux": "^4.4.1",
     "redux": "^3.3.1",
     "redux-logger": "^2.6.1",
     "webpack": "^1.12.14",
-    "webpack-notifier": "^1.3.0"
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-hot-middleware": "^2.10.0"
   }
 }

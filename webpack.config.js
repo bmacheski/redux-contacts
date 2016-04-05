@@ -1,40 +1,41 @@
-const webpack = require('webpack')
-const notifier = require('webpack-notifier')
 const path = require('path')
+const webpack = require('webpack')
 
 const config = {
-  entry: './client/index.js',
-  output: {
-    path: path.join(__dirname, '/public'),
-    publicPath: 'public/',
-    filename: 'bundle.js'
+  devtool: 'cheap-module-eval-source-map',
+  entry: [
+    'webpack-hot-middleware/client',
+    './client/index'
+  ],
+  output:{
+    path: path.join(__dirname, 'public'),
+    filename: 'bundle.js',
+    publicPath: '/'
   },
+  plugins: [
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin(),
+    new webpack.ProgressPlugin(function handler(percentage, msg) {
+      console.log((percentage * 100) + '%', msg)
+    })
+  ],
   module: {
     loaders: [
       {
-        test: /\.jsx?$/,
-        exclude: /(node_modules|bower_components)/,
+        test: /\.js$/,
         loader: 'babel',
         query: {
-          presets: ['es2015', 'react']
-        }
+          presets: ['react','es2015']
+        },
+        exclude: /node_modules/
       },
       {
         test: /\.css$/,
         loader: 'style!css'
-      },
-      {
-        test: /\.scss$/,
-        loader: 'style!css!sass'
       }
     ]
-  },
-  resolve: {
-    modulesDirectories: ['node_modules']
-  },
-  plugins: [
-    new notifier()
-  ]
+  }
 }
 
 module.exports = config
