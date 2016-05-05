@@ -1,6 +1,6 @@
-import expect from 'expect'
-import item from '../../client/reducers/item'
-import { add_item, remove_item, complete_item } from '../../client/constants/ActionTypes'
+import expect from 'expect';
+import item from '../../client/reducers/item';
+import { add_item, remove_item, complete_item } from '../../client/constants/ActionTypes';
 
 describe('reducers', () => {
   describe('item reducer', () => {
@@ -14,7 +14,7 @@ describe('reducers', () => {
           }
         ]
       )
-    })
+    });
 
     it('should handle add item', () => {
       expect(
@@ -31,7 +31,7 @@ describe('reducers', () => {
           }
         ]
       )
-    })
+    });
 
     it('should handle remove item', () => {
       expect(
@@ -58,7 +58,7 @@ describe('reducers', () => {
           }
         ]
       )
-    })
+    });
 
     it('should handle a completed item', () => {
       expect(
@@ -81,6 +81,6 @@ describe('reducers', () => {
           }
         ]
       )
-    })
-  })
-})
+    });
+  });
+});

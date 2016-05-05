@@ -1,17 +1,15 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-import ListItem from '../ListItem'
-import style from './style.css'
+import ListItem from '../ListItem';
+import style from './style.css';
 
 class MainSection extends Component {
-
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
-    const { items, completeItem } = this.props
-
+    const { items, completeItem } = this.props;
     const list = items.map(item => {
       return (
         <ListItem
@@ -20,8 +18,8 @@ class MainSection extends Component {
           item={item}
           completeItem={completeItem.bind(this, item.id)}>
         </ListItem>
-      )
-    })
+      );
+    });
 
     return (
       <div>
@@ -29,8 +27,8 @@ class MainSection extends Component {
           {list}
         </ul>
       </div>
-    )
+    );
   }
 }
 
-export default MainSection
+export default MainSection;

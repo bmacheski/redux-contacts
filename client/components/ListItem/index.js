@@ -1,19 +1,18 @@
-import React, { Component } from 'react'
-import classnames from 'classnames'
+import React, { Component } from 'react';
+import classnames from 'classnames';
 
-import style from './style.css'
+import style from './style.css';
 
 class ListItem extends Component {
-
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
-    const { item, completeItem } = this.props
+    const { item, completeItem } = this.props;
     const classes = classnames({
       'bought': item.bought
-    })
+    });
 
     return (
       <li className={classes}>
@@ -22,11 +21,11 @@ class ListItem extends Component {
           className="check"
           type="checkbox"
           checked={item.bought}
-          onChange={ () => completeItem() }
+          onChange={() => completeItem()}
         />
       </li>
     )
   }
 }
 
-export default ListItem
+export default ListItem;
