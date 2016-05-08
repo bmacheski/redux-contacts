@@ -15,10 +15,7 @@ const config = {
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
-    new webpack.ProgressPlugin(function handler(percentage, msg) {
-      console.log((percentage * 100) + '%', msg)
-    })
+    new webpack.NoErrorsPlugin()
   ],
   module: {
     loaders: [

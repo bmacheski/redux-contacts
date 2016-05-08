@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register --recursive || true",
-    "build": "NODE_ENV=development webpack",
-    "start": "node server.js",
+    "build": "webpack",
+    "start": "NODE_ENV=development node server.js",
     "lint" : "eslint ./client || true"
   },
   "repository": {

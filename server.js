@@ -1,15 +1,22 @@
-const webpack       = require('webpack')
-    , devMiddleware = require('webpack-dev-middleware')
-    , hotMiddleware = require('webpack-hot-middleware')
-    , config        = require('./webpack.config')
-    , app           = require('express')()
-    , compiler      = webpack(config)
-    , port          = 3000;
+const webpack     = require('webpack')
+  , express       = require('express')
+  , devMiddleware = require('webpack-dev-middleware')
+  , hotMiddleware = require('webpack-hot-middleware')
+  , config        = require('./webpack.config')
+  , app           = express()
+  , port          = 3000;
 
-app.use(devMiddleware(compiler, { noInfo: true, publicPath: config.output.publicPath }));
-app.use(hotMiddleware(compiler));
+if (app.get('env') === 'development') {
+  const compiler = webpack(config);
 
-app.get('/', (req, res) => res.sendFile(__dirname + '/public/index.html'));
+  app.use(hotMiddleware(compiler));
+  app.use(devMiddleware(compiler, {
+    noInfo: true,
+    publicPath: config.output.publicPath
+  }));
+}
+
+app.use(express.static('public'));
 
 app.listen(port, err => {
   err
