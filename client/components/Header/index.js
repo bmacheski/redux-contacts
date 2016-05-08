@@ -38,4 +38,8 @@ class Header extends Component {
   }
 }
 
+Header.propTypes = {
+  addItem: React.PropTypes.func
+};
+
 export default Header;

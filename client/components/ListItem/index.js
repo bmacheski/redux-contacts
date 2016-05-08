@@ -4,10 +4,6 @@ import classnames from 'classnames';
 import style from './style.css';
 
 class ListItem extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const { item, completeItem } = this.props;
     const classes = classnames({
@@ -24,7 +20,7 @@ class ListItem extends Component {
           onChange={() => completeItem()}
         />
       </li>
-    )
+    );
   }
 }
 

@@ -27,16 +27,16 @@ class App extends Component {
 function mapStateToProps(state) {
   return {
     items: state.item
-  }
+  };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
     actions: bindActionCreators(ListActions, dispatch)
-  }
+  };
 }
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(App)
+)(App);

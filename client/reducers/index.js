@@ -4,4 +4,4 @@ import item from './item';
 
 export default combineReducers({
   item
-})
+});

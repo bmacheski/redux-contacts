@@ -4,10 +4,6 @@ import ListItem from '../ListItem';
 import style from './style.css';
 
 class MainSection extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const { items, completeItem } = this.props;
     const list = items.map(item => {
@@ -30,5 +26,10 @@ class MainSection extends Component {
     );
   }
 }
+
+MainSection.propTypes = {
+  items: React.PropTypes.array,
+  completeItem: React.PropTypes.func
+};
 
 export default MainSection;
