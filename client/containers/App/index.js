@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 import * as ListActions from '../../actions';
 import MainSection from '../../components/MainSection';
 import Header from '../../components/Header';
-import style from './style.css';
+import style from './style.css'; // eslint-disable-line no-unused-vars
 
 class App extends Component {
   render() {

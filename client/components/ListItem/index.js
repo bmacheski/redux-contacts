@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 
-import style from './style.css';
+import style from './style.css'; // eslint-disable-line no-unused-vars
 
 class ListItem extends Component {
   render() {
-    const { item, completeItem } = this.props;
+    const { item, completeItem, text } = this.props;
     const classes = classnames({
-      'bought': item.bought
+      bought: item.bought
     });
 
     return (
       <li className={classes}>
-        {this.props.text}
+        {text}
         <input
           className="check"
           type="checkbox"
@@ -23,5 +23,11 @@ class ListItem extends Component {
     );
   }
 }
+
+ListItem.propTypes = {
+  item: React.PropTypes.object,
+  completeItem: React.PropTypes.func,
+  text: React.PropTypes.string
+};
 
 export default ListItem;

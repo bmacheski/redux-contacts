@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import ListItem from '../ListItem';
-import style from './style.css';
+import style from './style.css'; // eslint-disable-line no-unused-vars
 
 class MainSection extends Component {
   render() {

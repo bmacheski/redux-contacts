@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-import style from './style.css';
+import style from './style.css'; // eslint-disable-line no-unused-vars
 
 class Header extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      text: ''
-    };
+    this.state = { text: '' };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSave = this.handleSave.bind(this);
   }
 
   handleChange(e) {
@@ -30,8 +30,8 @@ class Header extends Component {
           className="newitem"
           placeholder="Enter a new item"
           value={this.state.text}
-          onChange={this.handleChange.bind(this)}
-          onKeyDown={this.handleSave.bind(this)}
+          onChange={this.handleChange}
+          onKeyDown={this.handleSave}
         />
       </div>
     );
