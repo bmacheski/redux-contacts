@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 
 import * as ListActions from '../../actions';
@@ -23,6 +23,11 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  items: React.PropTypes.array,
+  actions: React.PropTypes.object
+};
 
 function mapStateToProps(state) {
   return {

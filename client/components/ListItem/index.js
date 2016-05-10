@@ -17,7 +17,7 @@ class ListItem extends Component {
           className="check"
           type="checkbox"
           checked={item.bought}
-          onChange={() => completeItem()}
+          onChange={completeItem}
         />
       </li>
     );

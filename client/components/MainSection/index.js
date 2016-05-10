@@ -12,8 +12,8 @@ class MainSection extends Component {
           key={item.id}
           text={item.name}
           item={item}
-          completeItem={completeItem.bind(this, item.id)}>
-        </ListItem>
+          completeItem={() => completeItem(item)}
+        />
       );
     });
 

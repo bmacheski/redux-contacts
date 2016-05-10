@@ -14,9 +14,9 @@ export function removeItem(id) {
   };
 }
 
-export function completeItem(id) {
+export function completeItem(item) {
   return {
     type: types.complete_item,
-    id
+    id: item.id
   };
 }

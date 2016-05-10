@@ -14,19 +14,19 @@ export default function item(state = initialState, action) {
       return [
         {
           name: action.name,
-          id: state.reduce((maxId, item) => Math.max(item.id, maxId), -1) + 1,
+          id: state.reduce((maxId, product) => Math.max(product.id, maxId), -1) + 1,
           bought: false,
         }, ...state
       ];
 
     case types.remove_item:
-      return state.filter(item => item.id !== action.id);
+      return state.filter(product => product.id !== action.id);
 
     case types.complete_item:
-      return state.map(item =>
-        item.id === action.id
-        ? Object.assign({}, item, { bought: !item.bought })
-        : item
+      return state.map(product =>
+        product.id === action.id
+        ? Object.assign({}, product, { bought: !product.bought })
+        : product
       );
 
     default:
